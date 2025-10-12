@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import NavBar from "../components/nav"
-import GradualBlur from '../components/GradualBlur';
 import SmootherScroll from '../components/SmoothScroll'
 import "./globals.css";
 import SmoothScroll from "../components/SmoothScroll";
@@ -17,6 +16,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   return (
     <html lang="en">
       <body className="relative">
+        
             <SmoothScroll/>
             <motion.main
               key={pathname}
