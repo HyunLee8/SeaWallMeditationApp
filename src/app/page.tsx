@@ -25,7 +25,7 @@ export default function Home() {
           />
         </div>
         <div id="home" className="absolute flex flex-col items-center justify-center">
-          <h1 className="text-7xl font-bold animate-pulse">BASELINE</h1>
+          <h1 className="text-7xl font-bold animate-pulse">SEA WALL</h1>
           <Link href="/menu">
             <ShinyText
               text="Click here to Continue"
