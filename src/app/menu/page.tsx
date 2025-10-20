@@ -2,8 +2,6 @@
 
 import TextType from '../../components/TextType';
 import FadeContent from '../../components/FadeContent'
-import Aurora from '../../components/Aurora';
-import DecryptedText from '../../components/DecryptedText';
 import ScrollReveal from '../../components/ScrollReveal';
 import Image from "next/image";
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
@@ -23,7 +21,7 @@ export default function menu() {
     <div className="w-full min-h-screen flex flex-col justify-center">
       <div className="pt-80 pb-100 flex flex-col justify-center items-center">
         <div>
-          <h1 className="text-center text-7xl font-bold">Envisioning Euphoria</h1>
+          <h1 className="text-center text-7xl font-bold">Understanding Euphoria</h1>
         </div>
         <TextType
           text={["The next gen meditation app", "Engineered for Inner Balance", "Find stillness in motion", "Breath. Focus. Evolve"]}
@@ -35,21 +33,21 @@ export default function menu() {
         />
         <div>
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-            <button className="p-3 mt-4 border rounded-full">Discover</button>
+            <button onClick={() => {const section = document.getElementById("overview"); section?.scrollIntoView({ behavior: "smooth" }); }} className="p-3 mt-4 border rounded-full hover:bg-white hover:text-black transition-colors transition-text duration-300 ease-in-out">Discover</button>
           </FadeContent>
         </div>
       </div>
-      <div className=" flex-wrap text-white min-h-screen pb-50">
+      <div id="overview" className=" flex-wrap text-white min-h-screen pb-50">
         <div className="mr-auto">
-          <h1 className="font-light text-xl pl-10 pt-10">Overview</h1>
+          <h1 className="font-light text-7xl pl-10 pt-10 text-gray-500">Overview</h1>
         </div>
         <div className="ml-auto mb-25 p-5">
           <p className="font-light pl-5 max-w-125 min-w-90 ml-auto pb-5 text-base">“A thing of beauty is a joy forever: its loveliness increases; it will never pass into nothingness; but still, like music, will vibrate in the minds of those who can hear, filling them with pleasure, and raising them to a state of bliss beyond the daily humdrum of life.”</p>
           <p className="font-light pl-5 max-w-125 min-w-90 ml-auto text-gray-500 text-base">「美しいものは永遠の喜びです。その愛らしさは増し、決して消え去ることはありません。しかし、音楽のように、聞く人の心の中で響き続け、喜びで満たし、日々の単調な生活を超えた至福の境地へと引き上げます。」</p>
         </div>
         <div className="flex flex-wrap p-5 pb-40">
-          <img className="object-cover h-110 w-150" src="Seawall5.png" />
-          <img className="h-75 w-90 ml-auto" src="Seawall6.png" />
+          <img className="object-cover h-110 w-150" src="Seawall9.png" />
+          <img className="h-75 w-90 ml-auto mt-20 contained" src="Seawall10.png" />
         </div>
       </div>
       <div className="bg-black min-h-screen flex justify-center items-center flex-col pb-100">
@@ -82,7 +80,7 @@ export default function menu() {
           </span>
         </button>
       </div>
-      <div className="bg-black min-h-screen flex justify-center items-center flex-col bg-gradient-to-b from-black to-blue-500">
+      <div className="bg-black min-h-screen flex justify-center items-center flex-col">
         <h1 className="text-6xl mb-5 text-blue-500 ">Euphoria</h1>
         <p className="max-w-90 text-center mb-5">Pushed further into the euphoric zone, let sound elevate it. Every tone enhances the moment.</p>
         <button className="relative overflow-hidden px-10 py-3 bg-white text-blue-500 font-semibold group">
@@ -91,7 +89,15 @@ export default function menu() {
             Express
           </span>
         </button>
-      </div> 
+      </div>
+      <div className="bg-black min-h-screen flex justify-center items-center flex-col">
+        <h1 className="text-8xl pb-20">The Story</h1>
+        <div className="text-center max-w-150">
+          <p className="pb-5">Across the ages, humanity has sought the essence of joy — the fleeting moments when the heart feels light, the mind feels free, and life itself seems to shimmer. From sun-drenched mornings to quiet starlit nights, happiness has revealed itself in subtle gestures, in the laughter shared between strangers, and in the serene calm of solitude.</p>
+          <p className="pb-5">It is a force both delicate and profound, shaping the course of lives and echoing through generations. Those who understand its rhythm know that happiness is not merely an event, but a state of being — a luminous thread weaving through the tapestry of existence, elevating ordinary days into moments of wonder, connection, and awe.</p>
+          <p className="pb-5">Even amidst turmoil, the pursuit of joy persists, reminding all that within the human spirit lies the power to transform fleeting instants into enduring bliss.</p>
+        </div>
+      </div>
     </div>
   )
 }

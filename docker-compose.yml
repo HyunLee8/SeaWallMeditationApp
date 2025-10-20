@@ -1,0 +1,10 @@
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: legoae86
+      POSTGRES_PASSWORD: 1471440sI$
+      POSTGRES_DB: mydb
+    ports:
+      - "5433:5432"
