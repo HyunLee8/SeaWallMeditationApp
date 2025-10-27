@@ -1,4 +1,3 @@
-import Link from "next/link";
 import TypographyMuted from "./text/TypographyMuted"
 import { Button } from "@/components/ui/button"
 import {
@@ -12,31 +11,32 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-export default function EmailForm() {
+import { useState } from 'react'
+
+
+export default function Login() {
+
+
+
   return (
-    <Card className="w-full max-w-sm">
+    <Card className="w-full max-w">
       <CardHeader>
         <CardTitle>Login to your account</CardTitle>
         <CardDescription>
-          Enter your email below to login to your account
+          sign in with phone number
         </CardDescription>
         <CardAction>
-          <Link href="/SignUp">
-            <TypographyMuted>
-              SignUp
-            </TypographyMuted>
-          </Link>
         </CardAction>
       </CardHeader>
       <CardContent>
         <form>
           <div className="flex flex-col gap-6">
             <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">Phone Number</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="m@example.com"
+                placeholder=""
                 required
               />
             </div>
