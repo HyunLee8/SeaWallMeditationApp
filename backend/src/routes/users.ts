@@ -1,3 +1,8 @@
+//=================================================================================================
+//PURPOSE:
+//How to handle user management API 
+//handle user signup in a safe way
+//=================================================================================================
 import { Hono } from "hono"; //imports Hono framwork
 import { db } from "../db"   //imports the Drizzle database
 import { users } from "../db/schema" //imports the table schema
@@ -17,7 +22,7 @@ userRoute.post("/", async (c) => { //the '/' is for the base route; "the base of
 
   try {   //still need to do another check after the 1st for unexpected errors
     const newUser = await db
-    .insert(users)
+    .insert(users) //FROM SCHEMA USERS
     .values({ name, email, password: hashedPassword })
     .returning();  //this is for when you need to acess their informaiton, if you don't do this it will be inserted in the database but you can't retrieve it
 
